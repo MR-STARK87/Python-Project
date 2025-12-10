@@ -1,0 +1,49 @@
+{
+  "github": {
+    "username": "your-github-username",
+    "token": "ghp_your_personal_access_token_here",
+    "api_url": "https://api.github.com"
+  },
+  "backup": {
+    "output_directory": "backups",
+    "create_archive": true,
+    "archive_format": "zip",
+    "keep_temp_files": false,
+    "filename_pattern": "{username}_repos_{timestamp}",
+    "archive_pattern": "{username}_backup_{timestamp}"
+  },
+  "api": {
+    "timeout": 30,
+    "per_page": 100,
+    "max_retries": 3,
+    "retry_delay": 1,
+    "rate_limit_buffer": 10
+  },
+  "filters": {
+    "include_private": true,
+    "include_public": true,
+    "include_forks": true,
+    "include_archived": true,
+    "min_stars": 0,
+    "languages": []
+  },
+  "metadata": {
+    "include_readme": false,
+    "include_contributors": false,
+    "include_releases": false,
+    "include_issues": false,
+    "include_pull_requests": false
+  },
+  "streamlit": {
+    "page_title": "GitHub Backup Tool",
+    "page_icon": "🗄️",
+    "layout": "wide",
+    "theme": "purple-gradient"
+  },
+  "logging": {
+    "enabled": true,
+    "level": "INFO",
+    "log_file": "backup.log",
+    "log_format": "%(asctime)s - %(levelname)s - %(message)s"
+  }
+}
